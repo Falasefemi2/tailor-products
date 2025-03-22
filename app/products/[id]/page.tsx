@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold">{product.name}</h1>
-          <div className="mt-4 text-2xl font-semibold">${product.price.toFixed(2)}</div>
+          <div className="mt-4 text-2xl font-semibold">₦{product.price.toFixed(2)}</div>
 
           <div className="mt-6 space-y-6">
             <div>

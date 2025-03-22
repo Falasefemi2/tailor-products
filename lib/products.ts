@@ -5,6 +5,7 @@ import suit from "../public/suit.png";
 import cloth1 from "../public/portrait-woman-posing-traditional-african-attire-outdoors.jpg";
 import cloth2 from "../public/side-view-woman-wearing-native-attire.jpg";
 import cloth3 from "../public/woman-wearing-native-african-clothing-beach.jpg";
+import weddinggown from "../public/weddinggown.jpg";
 
 export const products: Product[] = [
   {
@@ -78,7 +79,7 @@ export const products: Product[] = [
       "An exquisite tuxedo for the most formal occasions. Features satin lapels and traditional styling with modern proportions.",
     price: 1199.99,
     category: "suits",
-    image: "/placeholder.svg?height=600&width=600",
+    image: suit,
     details: [
       "Super 150s wool",
       "Satin peak lapels",
@@ -94,7 +95,7 @@ export const products: Product[] = [
       "A bespoke wedding dress designed to make your special day unforgettable. Includes multiple fittings and consultations.",
     price: 2499.99,
     category: "dresses",
-    image: "/placeholder.svg?height=600&width=600",
+    image: weddinggown,
     details: [
       "Premium fabrics (silk, lace, organza options)",
       "Hand-sewn embellishments",
@@ -110,7 +111,7 @@ export const products: Product[] = [
       "A perfectly fitted dress shirt made from Egyptian cotton. Available in various collar and cuff styles.",
     price: 199.99,
     category: "shirts",
-    image: "/placeholder.svg?height=600&width=600",
+    image: cloth3,
     details: [
       "100% Egyptian cotton",
       "Multiple collar and cuff options",
@@ -126,7 +127,7 @@ export const products: Product[] = [
       "A luxurious silk tie made with traditional techniques. Perfect for adding a touch of elegance to any outfit.",
     price: 129.99,
     category: "accessories",
-    image: "/placeholder.svg?height=600&width=600",
+    image: suit,
     details: [
       "100% silk",
       "Hand-rolled edges",
@@ -142,7 +143,7 @@ export const products: Product[] = [
       "A lightweight linen dress perfect for summer events and casual outings. Features a flattering cut and comfortable fit.",
     price: 399.99,
     category: "dresses",
-    image: "/placeholder.svg?height=600&width=600",
+    image: cloth2,
     details: [
       "100% premium linen",
       "Knee-length design",
@@ -158,7 +159,7 @@ export const products: Product[] = [
       "A sophisticated wool coat designed to keep you warm and stylish during colder months. Features a classic silhouette with modern details.",
     price: 899.99,
     category: "outerwear",
-    image: "/placeholder.svg?height=600&width=600",
+    image: cloth1,
     details: [
       "Premium wool blend",
       "Fully lined",
