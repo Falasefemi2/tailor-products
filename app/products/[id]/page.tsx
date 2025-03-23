@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button"
 import { products } from "@/lib/products"
 import type { Metadata } from "next"
 
-interface ProductPageProps {
-  params: {
-    id: string
-  }
-}
 
-export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = await products.find((p) => p.id === params.id)
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ id: string }>
+}): Promise<Metadata> {
+  const { id } = await params // Destructure id from the resolved params
+  const product = products.find((p) => p.id === id)
 
   if (!product) {
     return {
@@ -28,12 +28,23 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   }
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
-  const product = await products.find((p) => p.id === params.id)
+export default async function ProductPage({
+  params
+}: {
+  params: Promise<{ id: string }>
+}) {
+  if (!params) {
+    notFound();
+  }
+
+  const { id } = await params; // Destructure id from the resolved params
+
+  const product = products.find((p) => p.id === id);
 
   if (!product) {
-    notFound()
+    notFound();
   }
+
 
   return (
     <div className="container px-4 py-16 md:px-6 md:py-24">
